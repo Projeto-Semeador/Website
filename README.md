@@ -12,6 +12,7 @@ Esse repositório tem o objetivo de aprimorar um WebSite da escola "O Semeador",
 | Henrique Seppelfelt | 24.00545-2 | @HenriqueSeppelfelt |
 | Isabella Passarelli | 24.00038-8 | @IsabellaPassarelli |
 | Mateus Silva        | 24.00511-8 | @Matelz             |
+| Pedro Henricke      | 24.00818-4 | @Razorott           |
 
 ## Padrões:
 
