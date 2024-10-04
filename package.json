@@ -1,0 +1,22 @@
+{
+  "name": "projeto_semeador",
+  "version": "1.0.0",
+  "description": "Projeto dos alunos de Ciência da Computação do Instituto Mauá de Tecnologia em parceria com o colégio O Semeador",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Projeto-Semeador/Website.git"
+  },
+  "author": "IMT",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Projeto-Semeador/Website/issues"
+  },
+  "homepage": "https://github.com/Projeto-Semeador/Website#readme",
+  "dependencies": {
+    "bootstrap": "^5.3.3"
+  }
+}
