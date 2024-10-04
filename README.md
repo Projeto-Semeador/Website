@@ -1,4 +1,4 @@
-<image src="./src/images/logo.png" width="150" style="border-radius:20px"/>
+<image src="./src/images/project_logo.png" width="150" style="border-radius:20px"/>
 
 # Projeto Integrador Interdisciplinar (PII) - O Semeador
 
