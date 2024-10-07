@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
@@ -15,56 +15,61 @@
           id="navbar"
           class="navbar navbar-expand-sm bg-white px-lg-5 border-bottom"
         >
-            <a class="navbar-brand" style="margin-left: 1rem;" href="#">
-              <img id="logo" src="./images/semeador_logo.png" alt="logo" />
-            </a>
-            <div class="d-flex align-items-center gap-4" style="margin-right: 1rem;">
-              <button
-                class="navbar-toggler"
-                style="font-size: small"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarNav"
-                aria-controls="navbarNav"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-              >
-                <span class="navbar-toggler-icon"></span>
-              </button>
-            </div>
-            <div
-              class="collapse navbar-collapse justify-content-between bg-white"
-              id="navbarNav"
+          <a class="navbar-brand" style="margin-left: 1rem" href="#">
+            <img id="logo" src="./images/semeador_logo.png" alt="logo" />
+          </a>
+          <div
+            class="d-flex align-items-center gap-4"
+            style="margin-right: 1rem"
+          >
+            <button
+              class="navbar-toggler"
+              style="font-size: small"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
             >
-              <ul class="navbar-nav px-4 gap-2" style="font-size: small">
-                <li class="nav-item">
-                  <a class="nav-link" aria-current="page" href="#" id="inicio"
-                    >Inicio</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#sobrenos" id="sobrenos">Sobre Nós</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#comodoar" id="comodoar">Como Doar</a>
-                </li>
-              </ul>
-              <button
-                type="button"
-                class="btn btn-primary d-sm-block d-none text-white px-4"
-                style="font-size: small"
-              >
-                Quero Doar
-              </button>
-            </div>
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
+          <div
+            class="collapse navbar-collapse justify-content-between bg-white"
+            id="navbarNav"
+          >
+            <ul class="navbar-nav px-4 gap-2" style="font-size: small">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#" id="inicio"
+                  >Inicio</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#sobrenos" id="sobrenos">Sobre Nós</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#comodoar" id="comodoar">Como Doar</a>
+              </li>
+            </ul>
+            <button
+              type="button"
+              class="btn btn-primary d-sm-block d-none text-white px-4"
+              style="font-size: small"
+            >
+              Quero Doar
+            </button>
+          </div>
         </nav>
       </header>
       <!-- ? conteudo -->
       <main>
-        <div class="container-fluid bg-secondary" id="inicio" style="height: 90vh">
-          
-        </div>
-        <div class="container-fluid" id="sobrenos" style="height: 90vh;">
+        <div
+          class="container-fluid bg-secondary"
+          id="inicio"
+          style="height: 90vh"
+        ></div>
+        <div class="container-fluid" id="sobrenos" style="height: 90vh">
           teste
         </div>
       </main>
@@ -74,30 +79,30 @@
   </body>
   <script>
     // On change anchor, change active class
-    document.addEventListener("DOMContentLoaded", () => {
-      const links = document.querySelectorAll(".nav-link");
+    document.addEventListener('DOMContentLoaded', () => {
+      const links = document.querySelectorAll('.nav-link');
 
       links.forEach((link) => {
-        link.addEventListener("click", (e) => {
+        link.addEventListener('click', (e) => {
           links.forEach((link) => {
-            link.classList.remove("active");
+            link.classList.remove('active');
           });
-          e.target.classList.add("active");
+          e.target.classList.add('active');
         });
       });
     });
 
     // Get anchor id from URL
-    const re = new RegExp("(#[a-zA-Z0-9]*)");
+    const re = new RegExp('(#[a-zA-Z0-9]*)');
     const url = window.location.href;
 
-    const anchor = re.exec(url)[0].split("#")[1];
+    const anchor = re.exec(url)[0].split('#')[1];
     console.log(anchor);
 
     if (anchor) {
-      document.getElementById(anchor).classList.add("active");
+      document.getElementById(anchor).classList.add('active');
     } else {
-      document.getElementById("inicio").classList.add("active");
+      document.getElementById('inicio').classList.add('active');
     }
   </script>
   <script

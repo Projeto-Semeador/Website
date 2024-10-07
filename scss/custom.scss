@@ -23,7 +23,7 @@ html {
   margin-left: 0;
 
   > .col,
-  > [class*="col-"] {
+  > [class*='col-'] {
     padding-right: 0;
     padding-left: 0;
   }
@@ -56,4 +56,4 @@ html {
   width: 100%;
 }
 
-@import "../node_modules/bootstrap/scss/bootstrap.scss";
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
