@@ -41,15 +41,15 @@
           >
             <ul class="navbar-nav px-4 gap-2" style="font-size: small">
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#" id="inicio"
+                <a class="nav-link" aria-current="page" href="#" id="nav_inicio"
                   >Inicio</a
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#sobrenos" id="sobrenos">Sobre Nós</a>
+                <a class="nav-link" href="#sobrenos" id="nav_sobrenos">Sobre Nós</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#comodoar" id="comodoar">Como Doar</a>
+                <a class="nav-link" href="#comodoar" id="nav_comodoar">Como Doar</a>
               </li>
             </ul>
             <button
@@ -96,13 +96,14 @@
     const re = new RegExp('(#[a-zA-Z0-9]*)');
     const url = window.location.href;
 
-    const anchor = re.exec(url)[0].split('#')[1];
+    var anchor = re.exec(url)[0].split('#')[1];
     console.log(anchor);
 
     if (anchor) {
+      anchor = 'nav_' + anchor;
       document.getElementById(anchor).classList.add('active');
     } else {
-      document.getElementById('inicio').classList.add('active');
+      document.getElementById('nav_inicio').classList.add('active');
     }
   </script>
   <script
