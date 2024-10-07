@@ -1,10 +1,15 @@
-<image src="./src/images/project_logo.png" width="150" style="border-radius:20px"/>
+<center>
+    <image src="./src/images/icon.png" width="150" style="border-radius:20px"/>
 
 # Projeto Integrador Interdisciplinar (PII) - O Semeador
+
+</center>
 
 Esse repositório tem o objetivo de aprimorar um WebSite da escola "O Semeador", uma instituição beneficiente sem quaisquer fins lucrativos para crianças e adolescentes com TEA (Transtorno do Espectro Autista), deficiência intelectual, múltiplas deficiências e autismo.
 
 ## Instituto Mauá de Tecnologia (IMT) - Turma 4
+
+<center>
 
 | Alunos              | R.A.       | Github              |
 | ------------------- | ---------- | ------------------- |
@@ -13,6 +18,8 @@ Esse repositório tem o objetivo de aprimorar um WebSite da escola "O Semeador",
 | Isabella Passarelli | 24.00038-8 | @IsabellaPassarelli |
 | Mateus Silva        | 24.00511-8 | @Matelz             |
 | Pedro Henricke      | 24.00818-4 | @Razorott           |
+
+</center>
 
 ## Padrões:
 
