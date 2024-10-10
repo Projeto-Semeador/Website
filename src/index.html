@@ -1,8 +1,9 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./images/icon_SVG.svg" />
     <title>Colégio Metodista - O Semeador</title>
     <link href="../scss/custom.css" rel="stylesheet" />
   </head>
@@ -14,70 +15,101 @@
           id="navbar"
           class="navbar navbar-expand-sm bg-white px-lg-5 border-bottom"
         >
-          <div class="container-fluid">
-            <a class="navbar-brand px-4 mh-100" href="#">
-              <img id="logo" src="./images/semeador_logo.png" alt="logo" />
-            </a>
-            <div class="d-flex align-items-center gap-4">
-              <button
-                type="button"
-                class="btn btn-primary d-sm-none d-block text-white"
-                style="font-size: small"
-              >
-                Quero Doar
-              </button>
-              <button
-                class="navbar-toggler"
-                style="font-size: small"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarNav"
-                aria-controls="navbarNav"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-              >
-                <span class="navbar-toggler-icon"></span>
-              </button>
-            </div>
-            <div
-              class="collapse navbar-collapse d-lg-flex justify-content-between"
-              id="navbarNav"
+          <a class="navbar-brand" style="margin-left: 1rem" href="#">
+            <img id="logo" src="./images/icon_SVG.svg" alt="logo" />
+          </a>
+          <div
+            class="d-flex align-items-center gap-4"
+            style="margin-right: 1rem"
+          >
+            <button
+              class="navbar-toggler"
+              style="font-size: small"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
             >
-              <ul class="navbar-nav gap-2" style="font-size: small">
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#"
-                    >Inicio</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="/sobrenos">Sobre Nós</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="/comodoar">Como Doar</a>
-                </li>
-              </ul>
-              <button
-                type="button"
-                class="btn btn-primary d-sm-block d-none text-white px-4"
-                style="font-size: small"
-              >
-                Quero Doar
-              </button>
-            </div>
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
+          <div
+            class="collapse navbar-collapse justify-content-between bg-white"
+            id="navbarNav"
+          >
+            <ul class="navbar-nav px-4 gap-2" style="font-size: small">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#" id="nav_inicio"
+                  >Inicio</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#sobrenos" id="nav_sobrenos"
+                  >Sobre Nós</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#comodoar" id="nav_comodoar"
+                  >Como Doar</a
+                >
+              </li>
+            </ul>
+            <button
+              type="button"
+              class="btn btn-primary d-sm-block d-none text-white px-4"
+              style="font-size: small"
+            >
+              Quero Doar
+            </button>
           </div>
         </nav>
       </header>
       <!-- ? conteudo -->
-      <main style="width: 100%; height: 400px">
-        <!-- Hero
-        <div style="he">
-          <img id="hero" src="./images/hero.png" />
-        </div> -->
+      <main>
+        <div
+          class="container-fluid bg-secondary"
+          id="inicio"
+          style="height: 90vh"
+        ></div>
+        <div class="container-fluid" id="sobrenos" style="height: 90vh">
+          teste
+        </div>
       </main>
       <!-- ? footer -->
       <footer></footer>
     </div>
   </body>
+  <script>
+    // On change anchor, change active class
+    document.addEventListener('DOMContentLoaded', () => {
+      const links = document.querySelectorAll('.nav-link');
+
+      links.forEach((link) => {
+        link.addEventListener('click', (e) => {
+          links.forEach((link) => {
+            link.classList.remove('active');
+          });
+          e.target.classList.add('active');
+        });
+      });
+    });
+
+    // Get anchor id from URL
+    const re = new RegExp('(#[a-zA-Z0-9]*)');
+    const url = window.location.href;
+
+    var anchor = re.exec(url)[0].split('#')[1];
+    console.log(anchor);
+
+    if (anchor) {
+      anchor = 'nav_' + anchor;
+      document.getElementById(anchor).classList.add('active');
+    } else {
+      document.getElementById('nav_inicio').classList.add('active');
+    }
+  </script>
   <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"

@@ -4,7 +4,8 @@
   "description": "Projeto dos alunos de Ciência da Computação do Instituto Mauá de Tecnologia em parceria com o colégio O Semeador",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "prettier . --write"
   },
   "repository": {
     "type": "git",
@@ -18,5 +19,8 @@
   "homepage": "https://github.com/Projeto-Semeador/Website#readme",
   "dependencies": {
     "bootstrap": "^5.3.3"
+  },
+  "devDependencies": {
+    "prettier": "3.3.3"
   }
 }
