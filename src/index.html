@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="./images/icon_SVG.svg" />
-    <title>Colégio Metodista - O Semeador</title>
     <link href="../scss/custom.css" rel="stylesheet" />
+    <title>Colégio Metodista - O Semeador</title>
   </head>
   <body>
     <div class="container-xs">
@@ -38,6 +38,7 @@
           <div
             class="collapse navbar-collapse justify-content-between bg-white"
             id="navbarNav"
+            style="z-index: 90"
           >
             <ul class="navbar-nav px-4 gap-2" style="font-size: small">
               <li class="nav-item">
@@ -68,7 +69,11 @@
       </header>
       <!-- ? conteudo -->
       <main>
-        <div class="carousel slide" style="height: 85vh" data-ride="carousel">
+        <div
+          class="carousel slide"
+          style="height: 85vh; z-index: -1"
+          data-bs-ride="carousel"
+        >
           <div class="carousel-inner" style="height: 85vh">
             <div class="carousel-item active">
               <img
@@ -79,43 +84,43 @@
             </div>
           </div>
         </div>
+        <section
+          id="sobrenos"
+          class="container-lg d-flex align-items-center justify-content-center"
+          style="height: 85vh"
+        >
+          <div class="row">
+            <div class="col-12 col-md-6">
+              <h1>Sobre Nós</h1>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit
+                repellat quis ullam id labore porro at, illo expedita. Culpa
+                maiores sed mollitia, alias tempore at omnis porro. Officiis
+                voluptatum aperiam deleniti sed, eveniet distinctio harum
+                excepturi, minima pariatur, doloremque voluptate cupiditate
+                molestias velit beatae veniam!
+              </p>
+              <a href="/sobre-nos" class="link-secondary">Veja mais </a>
+            </div>
+            <div class="col-12 col-md-6">
+              <img src="./images/sobre.jpg" alt="hero" class="img-fluid" />
+            </div>
+          </div>
+        </section>
       </main>
       <!-- ? footer -->
       <footer></footer>
     </div>
   </body>
-  <script>
-    // On change anchor, change active class
-    document.addEventListener('DOMContentLoaded', () => {
-      const links = document.querySelectorAll('.nav-link');
-
-      links.forEach((link) => {
-        link.addEventListener('click', (e) => {
-          links.forEach((link) => {
-            link.classList.remove('active');
-          });
-          e.target.classList.add('active');
-        });
-      });
-    });
-
-    // Get anchor id from URL
-    const re = new RegExp('(#[a-zA-Z0-9]*)');
-    const url = window.location.href;
-
-    var anchor = re.exec(url)[0].split('#')[1];
-    console.log(anchor);
-
-    if (anchor) {
-      anchor = 'nav_' + anchor;
-      document.getElementById(anchor).classList.add('active');
-    } else {
-      document.getElementById('nav_inicio').classList.add('active');
-    }
-  </script>
+  <script src="./js/main.js"></script>
   <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+    integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
     crossorigin="anonymous"
   ></script>
 </html>
