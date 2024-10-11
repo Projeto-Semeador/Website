@@ -5,17 +5,8 @@ html {
   scroll-behavior: smooth;
 }
 
-.nav-link {
-  text-decoration: 1px underline solid transparent !important;
-}
-
-.nav-link:hover {
-  transition: text-decoration 0.15s ease-in-out;
-  text-decoration: 1px underline solid $primary !important;
-}
-
 .active {
-  text-decoration: 1px underline solid $primary !important;
+  font-weight: 500 !important;
 }
 
 .no-gutters {
@@ -30,14 +21,14 @@ html {
 }
 
 #logo {
-  height: 60px;
+  height: 40px;
 }
 
-// @media (max-width: 768px) {
-//   #logo {
-//     height: 30px;
-//   }
-// }
+@media (max-width: 768px) {
+  #logo {
+    height: 30px;
+  }
+}
 
 #navbar {
   height: 10vh;
